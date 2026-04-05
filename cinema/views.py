@@ -9,7 +9,9 @@ from cinema.serializers import (MovieSessionSerializer,
                                 GenreSerializer,
                                 ActorSerializer,
                                 CinemaHallSerializer,
-                                MovieSerializer, MovieSessionListSerializer, MovieSessionDetailSerializer)
+                                MovieSerializer,
+                                MovieSessionListSerializer,
+                                MovieSessionDetailSerializer)
 
 
 class GenreViewSet(viewsets.ModelViewSet):
@@ -34,7 +36,9 @@ class MovieViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         queryset = self.queryset
         if self.action == "list":
-            queryset = queryset.select_related("actors", "genres")
+            queryset = queryset.select_related(
+                "actors"
+                "genres")
         return queryset
 
 
