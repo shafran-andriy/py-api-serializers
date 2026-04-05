@@ -37,7 +37,7 @@ class MovieViewSet(viewsets.ModelViewSet):
         queryset = self.queryset
         if self.action == "list":
             queryset = queryset.prefetch_related(
-                "actors"
+                "actors",
                 "genres")
         return queryset
 
