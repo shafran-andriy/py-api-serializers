@@ -14,13 +14,13 @@ router.register("genres",
 router.register("actors",
                 ActorViewSet,
                 basename="actor")
-router.register("cinema-halls",
+router.register("cinema_halls",
                 CinemaHallViewSet,
                 basename="cinema_hall")
 router.register("movies",
                 MovieViewSet,
                 basename="movie")
-router.register("movie-sessions",
+router.register("movie_sessions",
                 MovieSessionViewSet,
                 basename="movie_session")
 
